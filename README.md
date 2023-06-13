@@ -5,6 +5,9 @@
 
 ## LOGS
 - jun 13: followed tutorial part 1-8
+  1. ProfileInfoHeaderCollectionReusableView: I hate layout, why are the buttons so big?
+  2. ProfileView Controller: spent 1 hour trying to figure extra space under collection view --> **solution for future programme: check storyboard safe area size
+**
 
 ## TODOS
 ### Graphic design

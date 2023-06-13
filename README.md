@@ -1,30 +1,28 @@
 # Shareable app cis
 
-# Resources
-1. Basic Structure built following this tutorial: https://www.youtube.com/watch?v=BcsoBVakrTM&list=PL5PR3UyfTWvfhKNQkT3Wgq6QIIWRJyxM3&index=9
+## Resources
+1. Basic Structure built following this tutorial: [Link to tutorial](https://www.youtube.com/watch?v=BcsoBVakrTM&list=PL5PR3UyfTWvfhKNQkT3Wgq6QIIWRJyxM3&index=9)
 
-# LOGS
-jun 13: followed tutorial part 1-8
+## LOGS
+- jun 13: followed tutorial part 1-8
 
-# TODOS
-  Graphic design --> should be the last thing to do, currently need:
-    1. logo (app icon)
-    2. color theme
-    optional
-    1.icons 
-      navigation bar icons
+## TODOS
+### Graphic design
+- Should be the last thing to do, currently need:
+  1. Logo (app icon)
+  2. Color theme
+- Optional:
+  1. Icons
+  2. Navigation bar icons
   
-  LoginView Controller
-    1.email verify
-    2.log in with username 
+### LoginView Controller
+- Email verification
+- Log in with username 
   
-  Register Controller
-    1.check new username not exist + format
-    2.email verify
-    3.check password format
+### Register Controller
+- Check new username not exist + format
+- Email verification
+- Check password format
     
-  a bunch of other stuff are not at all workable, needed more functions built.
-  
-
-    
-  
+### Other
+- A bunch of other stuff are not at all workable, needed more functions built.

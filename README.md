@@ -16,7 +16,7 @@ jun 13: followed tutorial part 1-8
   
   LoginView Controller
     1.email verify
-    2.log in with username
+    2.log in with username 
   
   Register Controller
     1.check new username not exist + format

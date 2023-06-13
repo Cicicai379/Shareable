@@ -1,7 +1,12 @@
 # Shareable app cis
 
+
 ## Resources
 1. Basic Structure built following this tutorial: [Link to tutorial](https://www.youtube.com/watch?v=BcsoBVakrTM&list=PL5PR3UyfTWvfhKNQkT3Wgq6QIIWRJyxM3&index=9)
+2. git repo update: [Link to tutorial](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)
+git add .
+git commit -m "jun 13"           
+git push origin main
 
 ## LOGS
 - jun 13: followed tutorial part 1-8

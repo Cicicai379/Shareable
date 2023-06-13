@@ -7,23 +7,23 @@
 jun 13: followed tutorial part 1-8
 
 # TODOS
-  #Graphic design --> should be the last thing to do, currently need:
+  Graphic design --> should be the last thing to do, currently need:
     1. logo (app icon)
     2. color theme
     optional
     1.icons 
       navigation bar icons
   
-  #LoginView Controller
+  LoginView Controller
     1.email verify
     2.log in with username
   
-  #Register Controller
+  Register Controller
     1.check new username not exist + format
     2.email verify
     3.check password format
     
-  #a bunch of other stuff are not at all workable, needed more functions built.
+  a bunch of other stuff are not at all workable, needed more functions built.
   
 
     

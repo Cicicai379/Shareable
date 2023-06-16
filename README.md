@@ -28,6 +28,8 @@
 ## LOGS
 - jun 13: followed tutorial part 1-9
   1. debug_profileViewController: extra space under collectionView --> solved by resetting the view in the storyboard
+- jun 16: tutorial 9-14
+  1. debug_HomeViewController: transparent tap bar background --> solved by setting translucent property in storyboard
 
 ## TODOS
 ### Graphic design

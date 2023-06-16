@@ -33,10 +33,10 @@
 
 ## TODOS
 ### Graphic design
-- Should be the last thing to do, currently need:
+- currently need:
   1. Logo (app icon)
   2. Color theme
-- Optional:
+- Optional (there are system default assets for use):
   1. Icons
   2. Navigation bar icons
   
@@ -51,3 +51,4 @@
     
 ### Other
 - A bunch of other stuff are not at all workable, needed more functions built.
+- The layout referred to instagram, changes are needed

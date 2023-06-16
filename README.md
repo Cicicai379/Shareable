@@ -5,9 +5,18 @@
 2. if you encounter problems and you don't want to debug for 3 hours (and you are lazy), use chatgpt/poe/google
 3. DON'T delete the comments, they marks to-dos/incompleted functions/useful instructions
 4. Firebase is not setup yet, don't do it (you don't have my account)
+5. If you encounter problems with pods:
+    1. download cocoapods
+    2. go to your terminal 
+    3. cd (your project route)
+    4. pod init
+    5. pod install
+    6. Having errors == message me
+6.make sure that the colors for all UIs are automatically adaptable to both dark and light mode (search up how to do that, it'seasy)
+
 ### Less important things
 1. feel free to add any comment/content in this file, especially solutions to bugs
-
+2. command - shift - o to search the file that you want to edit in the project
 
  
 ## Resources

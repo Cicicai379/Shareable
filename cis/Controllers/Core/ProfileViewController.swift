@@ -11,7 +11,7 @@ final class ProfileViewController: UIViewController {
     
     private var collectionView: UICollectionView?
     private var userPosts = [UserPost]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -107,6 +107,7 @@ extension ProfileViewController: UICollectionViewDelegate,UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if indexPath.section == 1{
             let header1 = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileTabCollectionReusableView.identifier, for: indexPath) as! ProfileTabCollectionReusableView
+            header1.delegate = self
             return header1
         }
         guard kind == UICollectionView.elementKindSectionHeader else{
@@ -136,7 +137,11 @@ extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate
     }
     
     func profileHeaderDidTapFollowersButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListViewController()
+        var mockData = [UserRelationship]()
+        for x in 0..<10{
+            mockData.append(UserRelationship(username: "username", name: "name", type: x%2 == 0 ? .following : .not_following))
+        }
+        let vc = ListViewController(data: mockData)
         print("tapped")
         vc.title = "Followers"
         vc.navigationItem.largeTitleDisplayMode = .never
@@ -144,11 +149,32 @@ extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate
     }
     
     func profileHeaderDidTapFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListViewController()
+        var mockData = [UserRelationship]()
+        for x in 0..<10{
+            mockData.append(UserRelationship(username: "username", name: "name", type: x%2 == 0 ? .following : .not_following))
+        }
+        let vc = ListViewController(data: mockData)
         vc.title = "Following"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+
+
+
+extension ProfileViewController: ProfileTabCollectionReusableViewDelegate{
+    func didTapGridButtonTab() {
+        //reload collection view data
+    }
+    
+    func didTapTagButtonTab() {
+        //reload collection view data
+    }
+    
+    
+    
     
 }
+

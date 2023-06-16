@@ -12,10 +12,10 @@
         <scene sceneID="vX3-Ll-daT">
             <objects>
                 <tabBarController id="lps-Pa-Hx9" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uVQ-P8-Rfh">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="uVQ-P8-Rfh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
@@ -34,7 +34,9 @@
         <scene sceneID="lVc-8A-DAo">
             <objects>
                 <navigationController id="TMH-bT-yml" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" image="message" catalog="system" id="Ti8-Pu-Z6j"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="message" catalog="system" id="Ti8-Pu-Z6j">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nv2-Rb-BIB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,7 +53,9 @@
         <scene sceneID="POJ-vT-glv">
             <objects>
                 <navigationController id="W1K-y5-Le8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Upload" image="plus" catalog="system" id="pKA-Ld-9Vk"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="plus" catalog="system" id="pKA-Ld-9Vk">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="TmF-GY-9B2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RtC-eT-FES">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -69,7 +73,9 @@
         <scene sceneID="4M3-hK-YfE">
             <objects>
                 <navigationController id="BZE-08-yaD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="eiQ-8P-iED"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="eiQ-8P-iED">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eok-TH-jF7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -85,8 +91,11 @@
         <!--Home-->
         <scene sceneID="z0z-AM-nuv">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUl-Um-hgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="EvE-us-9tJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Q3I-cz-Znk"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Q3I-cz-Znk">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mF6-h6-yv6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +104,6 @@
                         <segue destination="PSR-bl-Ykn" kind="relationship" relationship="rootViewController" id="ZYr-eC-Ydw"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SUl-Um-hgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2401" y="17"/>
         </scene>
@@ -104,7 +112,7 @@
             <objects>
                 <viewController id="PSR-bl-Ykn" customClass="HomeViewController" customModule="cis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LKI-R8-v4f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AG0-pd-hl7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,7 +128,7 @@
             <objects>
                 <viewController id="xk2-Q9-VlV" customClass="NotificationViewController" customModule="cis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAd-LI-BwL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Muo-oz-0ai"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,7 +144,7 @@
             <objects>
                 <viewController id="kWU-HR-RNO" customClass="CameraViewController" customModule="cis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cb1-Uh-Elm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bR6-4I-fvT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -152,7 +160,7 @@
             <objects>
                 <viewController id="EzE-Bt-Ljp" customClass="ExplorerViewController" customModule="cis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNJ-Md-xrn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="95m-NR-8JE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,7 +176,7 @@
             <objects>
                 <viewController id="NSz-OI-A2N" customClass="ProfileViewController" customModule="cis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jit-we-XaM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="oXK-77-1JI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -183,7 +191,9 @@
         <scene sceneID="cIL-Rb-gc4">
             <objects>
                 <navigationController title="Profile Scene" id="weZ-r5-2gk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="oU9-na-3vB"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="oU9-na-3vB">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsp-Jm-eWL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -205,6 +215,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

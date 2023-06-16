@@ -19,9 +19,9 @@ class ExplorerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemRed
         navigationItem.titleView = searchBar
-        
+        view.clipsToBounds = true
         title = "Explore"
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical

@@ -12,6 +12,7 @@ final class Post: UITableViewCell {
     static let identifier  = "Post"
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .secondarySystemBackground
     }
     
     required init?(coder: NSCoder) {
@@ -20,5 +21,8 @@ final class Post: UITableViewCell {
     
     public func configure(){
         
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 }

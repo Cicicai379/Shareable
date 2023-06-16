@@ -7,8 +7,9 @@
 
 import Foundation
 
-public enum UserPostType {
-    case photo, video
+public enum UserPostType:String {
+    case photo = "Photo"
+    case video = "Video"
 }
 public enum gender{
     case female, male, other
@@ -19,6 +20,7 @@ public struct User{
     let name: (first:String, last:String)
     let gender: gender
     let counts: UserCount
+    let profilePicture: URL
 }
 public struct UserCount{
     let follower: Int
@@ -35,6 +37,7 @@ public struct UserPost{
     let likes: [PostLike]
     let comments: [PostComment]
     let createdDate: Date
+    let owner: User
     let tags: [String]
 }
 

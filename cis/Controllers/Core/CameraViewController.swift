@@ -12,6 +12,8 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Upload"
+        view.backgroundColor = .systemRed
+        view.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
     

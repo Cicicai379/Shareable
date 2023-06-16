@@ -105,12 +105,16 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource{
         switch model.renderType{
         case .action(let actions):
             let cell = tableView.dequeueReusableCell(withIdentifier: PostAction.identifier, for: indexPath) as! PostAction
+            cell.delgate = self
             return cell
         case .header(let user):
             let cell = tableView.dequeueReusableCell(withIdentifier: PostHeader.identifier, for: indexPath) as! PostHeader
+            cell.delgate = self
+            cell.configure(with: user)
             return cell
         case .primaryContent(let post):
             let cell = tableView.dequeueReusableCell(withIdentifier: Post.identifier, for: indexPath) as! Post
+            cell.configure(with: post)
             return cell
         case .comments(let comments):
             let cell = tableView.dequeueReusableCell(withIdentifier: PostGeneral.identifier, for: indexPath) as! PostGeneral
@@ -126,12 +130,40 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let model = renderModels[indexPath.section]
         switch model.renderType{
-        case .action(_):return 60
+        case .action(_):return 40
         case .header(_):return 50
         case .primaryContent(_):return tableView.width
         case .comments(_):
             return 40
-           
         }
     }
 }
+
+
+
+extension PostViewController:PostHeaderDelegate{
+    func didTapMoreButton() {
+        let actionSheet = UIAlertController(title: "Post Options", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Report Post", style: .destructive, handler:{ [weak self]_ in
+            self?.reportPost()
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func reportPost(){
+        print("did tap report post")
+    }
+}
+
+extension PostViewController:PostActionDelegate{
+    func didTapLikeButton() {
+        //update database
+    }
+    func didTapCommentButton() {
+        //update database
+    }
+}
+

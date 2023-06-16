@@ -133,6 +133,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             switch postModel.renderType {
                 case .primaryContent(let post):
                     let cell = tableView.dequeueReusableCell(withIdentifier: Post.identifier, for: indexPath) as! Post
+                    cell.configure(with:post)
                     return cell
                 case .action, .header, .comments: return UITableViewCell()
             }
@@ -142,6 +143,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             switch actionModel.renderType {
                 case .action(let action):
                     let cell = tableView.dequeueReusableCell(withIdentifier: PostAction.identifier, for: indexPath) as! PostAction
+                    cell.delgate = self
                     return cell
                 case .primaryContent, .header, .comments: return UITableViewCell()
 
@@ -163,7 +165,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             switch headerModel.renderType {
                 case .header(let user):
                     let cell = tableView.dequeueReusableCell(withIdentifier: PostHeader.identifier, for: indexPath) as! PostHeader
-                    return cell
+                cell.configure(with: user)
+                cell.delgate = self
+                return cell
             case .primaryContent, .action, .comments: return UITableViewCell()
             }
         }
@@ -182,7 +186,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         } else if subSection == 1 {
             return tableView.width
         } else if subSection == 2 {
-            return 60
+            return 40
         } else if subSection == 3 {
             return 40
         }
@@ -201,3 +205,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return UIView()
     }
 }
+
+extension HomeViewController:PostHeaderDelegate{
+    func didTapMoreButton() {
+        let actionSheet = UIAlertController(title: "Post Options", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Report Post", style: .destructive, handler:{ [weak self]_ in
+            self?.reportPost()
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func reportPost(){
+        print("did tap report post")
+    }
+}
+
+extension HomeViewController:PostActionDelegate{
+    func didTapLikeButton() {
+        //update database
+    }
+    func didTapCommentButton() {
+        //update database
+    }
+}
+

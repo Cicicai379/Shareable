@@ -21,6 +21,7 @@
  
 ## Resources
 1. Basic Structure built following this tutorial (not quite useful, unless you want to watch a 10 hrs long one): [Link to tutorial](https://www.youtube.com/watch?v=BcsoBVakrTM&list=PL5PR3UyfTWvfhKNQkT3Wgq6QIIWRJyxM3&index=9)
+    **this tutorial is not complete, purchasing the whole thing is 99usd **
 2. Setting up Github: [Link](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 
@@ -28,7 +29,7 @@
 ## LOGS
 - jun 13: followed tutorial part 1-9
   1. debug_profileViewController: extra space under collectionView --> solved by resetting the view in the storyboard
-- jun 16: tutorial 9-14
+- jun 16: tutorial 9-16
   1. debug_HomeViewController: transparent tap bar background --> solved by setting translucent property in storyboard
 
 ## TODOS

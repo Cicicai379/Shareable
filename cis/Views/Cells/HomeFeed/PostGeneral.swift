@@ -9,6 +9,9 @@ import UIKit
 
 class PostGeneral: UITableViewCell {
 
+
+    //MARK: this is not started yet, the view cell should show: username + comment (two labels?) + profile pic(?)
+    
     static let identifier  = "PostGeneral"
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
